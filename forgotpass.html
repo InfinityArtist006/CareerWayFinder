@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: url("../assets/bg2.png") no-repeat center center fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+      }
+      .container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        text-align: center;
+      }
+      .form-control {
+        border-radius: 30px;
+      }
+      .btn {
+        border-radius: 30px;
+      }
+      .header-logo {
+        height: 80px;
+        padding-bottom: 10px;
+        display: block;
+        margin: 0 auto;
+      }
+      .info-message {
+        display: none;
+        font-size: 0.85rem;
+        color: #f8d7da;
+        background-color: #721c24;
+        padding: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+      }
+      footer {
+        text-align: center;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px 0;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-md-6">
+              <a href="/">
+
+          <img class="header-logo" src="assets/logo.jpg" alt="Logo" />
+        </a>
+        <div class="card p-4">
+          <h3 class="mb-4">Forgot Password</h3>
+          <form id="forgotPasswordForm" action = "forgotpass">
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+              />
+              <div class="info-message" id="emailMessage">
+                Please enter a valid email address.
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary btn-block"
+              id="submitBtn"
+              disabled
+            >
+              Reset Password
+            </button>
+          </form>
+          <div class="mt-3">
+            <a href="login" class="text-light">Back to Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Career Way Finder. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      const emailField = document.getElementById("email");
+      const submitBtn = document.getElementById("submitBtn");
+      const emailMessage = document.getElementById("emailMessage");
+
+      const trustedEmailDomains = [
+        "gmail.com", "outlook.com", "hotmail.com", "yahoo.com", "icloud.com",
+        "aol.com", "zoho.com", "gmx.com"
+      ];
+
+      function validateForm() {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const email = emailField.value.trim();
+        const emailDomain = email.split("@")[1];
+
+        const isEmailValid = emailRegex.test(email) && trustedEmailDomains.includes(emailDomain);
+
+        emailMessage.style.display = isEmailValid || email === "" ? "none" : "block";
+        submitBtn.disabled = !isEmailValid;
+      }
+
+      emailField.addEventListener("input", validateForm);
+
+      document.getElementById("forgotPasswordForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        alert("Password reset instructions have been sent to your email.");
+        try {
+          const response = await fetch("/forgotpass",{
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({email:emailField.value.trim()}),
+          });
+
+          const data = response.json();
+          if (!data || Object.keys(data).length === 0){
+            window.location.href = "/resetpassword";//forwarding to reset password page 
+          }
+          else{
+            emailMessage.textContent = data.message || "User not found";
+            emailMessage.style.display = "block"; 
+          }
+        } catch (error) {
+         console.log(error); 
+        }
+      });
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+Here’s the ER diagram in text form, representing the relationships among your collections:
+
+ Entities and Attributes
+ 1. Careerwayfinder_users
+- `_id` (PK) – Unique identifier  
+- `full_name` – User's full name  
+- `email` (Unique) – User's email  
+- `password` – Hashed password  
+- `creation_date` – Account creation timestamp  
+- `user_status` – Account status (active/inactive)  
+- `career_maps` – (Array, FK) References `CareerRoadmaps(roadmap_id)`  
+- `__v` – Version key  
+
+ 2. CareerRoadmaps
+- `_id` (PK) – Unique identifier  
+- `roadmap_id` – Unique roadmap ID  
+- `core_career` – Main career category  
+- `academic_stream` – Streams leading to this career  
+- `career` – Career name  
+- `description` – Career details  
+- `college_course` – Recommended degree/certification  
+- `duration` – Time to establish in the field  
+- `exam_name(Optional)` – Entrance exams  
+- `subjects` – (Array) List of subjects  
+- `hashtags` – (Array) Related hashtags  
+- `steps` – (Array) Career progression stages  
+- `institutions` – (Array) Suggested institutions  
+- `salary_range` – Entry & experienced salary ranges  
+- `advancement_opportunities` – (Array) Career growth options  
+- `related_careers` – (Array) Other career options  
+- `professional_community` – (Array) Links to professional organizations  
+- `entry_requirements` – (Array) Eligibility criteria  
+- `related_books` – (Array) Suggested books  
+
+ 3. Careerwayfinder_reviews
+- `_id` (PK) – Unique identifier  
+- `email` (FK) – References `Careerwayfinder_users(email)`  
+- `full_name` – User's full name  
+- `suggestion` – Review or feedback text  
+- `post_time` – Timestamp of review submission  
+
+---
+
+ Relationships
+1. Careerwayfinder_users → CareerRoadmaps (Many-to-Many)  
+   - A user can follow multiple career roadmaps (`career_maps` array).  
+   - A roadmap can be followed by multiple users.  
+
+2. Careerwayfinder_users → Careerwayfinder_reviews (One-to-Many)  
+   - A user (identified by `email`) can submit multiple reviews.  
+
+3. CareerRoadmaps → Careerwayfinder_reviews (One-to-Many)  
+   - A career roadmap can have multiple reviews.  
+
+This textual ER diagram represents your data structure. Let me know if you need modifications! 🚀
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Here are the fields from your provided data without the values:
+
+_id
+core_career
+roadmap_id
+academic_stream
+career
+description
+college_course
+duration
+exam_name(Optional)
+subjects
+hashtags
+steps
+stage
+description
+institutions
+salary_range
+entry_level
+experienced
+advancement_opportunities
+related_careers
+professional_community
+name
+url
+type
+entry_requirements
+related_books
