@@ -112,3 +112,10 @@ CareerWayFinder is an interactive web-based platform designed to help individual
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
+## Project Members ##
+1 . https://github.com/SaumyaRanjanMallick
+2 . https://github.com/InfinityArtist006
+3. https://github.com/Sohilkhalifa432
+
+
