@@ -114,7 +114,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ## Project Members ##
-1 . https://github.com/SaumyaRanjanMallick  
+1 . https://github.com/SaumyaRanjanMallick
 
 2 . https://github.com/InfinityArtist006
 
