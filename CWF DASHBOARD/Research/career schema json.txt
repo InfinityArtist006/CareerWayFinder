@@ -1,0 +1,123 @@
+{
+  "core_career":"Engineering",
+  "roadmap_id": "RM001",
+  "academic_stream": "Science,Commerce,Arts",
+  "career": "Mechanical Engineer",
+  "description": "Mechanical engineers design, develop, build, and test mechanical devices, including tools, engines, and machines. They work in various industries, applying principles of motion, energy, and force to solve real-world problems.",
+  "college_course": "B.E. or B.Tech in Mechanical Engineering",
+  "duration": "4 years for B.E./B.Tech + 2-3 years for initial career establishment",
+  "exam_name(Optional)": "JEE Main, JEE Advanced, GATE (for higher studies/PSU jobs)",
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Engineering Mechanics",
+    "Thermodynamics",
+    "Fluid Mechanics",
+    "Material Science",
+    "Machine Design",
+    "Manufacturing Processes",
+    "Heat Transfer",
+    "Control Systems"
+  ],
+  "hashtags": [
+    "#MechanicalEngineering",
+    "#Engineering",
+    "#STEM",
+    "#Manufacturing",
+    "#Design",
+    "#Robotics"
+  ],  
+  "steps": [
+    {
+      "stage": "High School",
+      "description": "Focus on Physics, Chemistry, and Mathematics. Participate in science fairs and robotics clubs."
+    },
+    {
+      "stage": "Bachelor's Degree",
+      "description": "Complete a 4-year B.E. or B.Tech program in Mechanical Engineering from an accredited institution."
+    },
+    {
+      "stage": "Internship",
+      "description": "Gain practical experience through internships or co-op programs during your degree."
+    },
+    {
+      "stage": "Entry-level Position",
+      "description": "Secure an entry-level position as a Mechanical Engineer in your preferred industry."
+    },
+    {
+      "stage": "Professional Engineering (PE) License",
+      "description": "After gaining work experience, obtain a PE license for career advancement (optional but recommended)."
+    },
+    {
+      "stage": "Continuous Learning",
+      "description": "Stay updated with the latest technologies and industry trends through workshops, certifications, and possibly a master's degree."
+    }
+  ],
+  "institutions": [
+    "Indian Institutes of Technology (IITs)",
+    "National Institutes of Technology (NITs)",
+    "Birla Institute of Technology and Science (BITS)",
+    "Vellore Institute of Technology (VIT)",
+    "Delhi Technological University (DTU)"
+  ],
+  "salary_range": {
+    "entry_level": "₹3,00,000 - ₹5,00,000 per annum",
+    "experienced": "₹8,00,000 - ₹25,00,000+ per annum"
+  },
+  "advancement_opportunities": [
+    "Senior Mechanical Engineer",
+    "Project Manager",
+    "Research and Development Engineer",
+    "Engineering Manager",
+    "Chief Technology Officer",
+    "Consultant"
+  ],
+  "related_careers": [
+    "Aerospace Engineer",
+    "Automotive Engineer",
+    "Robotics Engineer",
+    "Manufacturing Engineer",
+    "Biomedical Engineer",
+    "Materials Engineer"
+  ],
+  "professional_community": [
+    {
+      "name": "American Society of Mechanical Engineers (ASME)",
+      "url": "https://www.asme.org/",
+      "type": "website"
+    },
+    {
+      "name": "r/MechanicalEngineering",
+      "url": "https://www.reddit.com/r/MechanicalEngineering/",
+      "type": "forum"
+    },
+    {
+      "name": "Institution of Mechanical Engineers (IMechE)",
+      "url": "https://www.imeche.org/",
+      "type": "website"
+    }
+  ],
+  "entry_requirements": [
+    "10+2 with Physics, Chemistry, and Mathematics",
+    "Good score in JEE Main/Advanced for top engineering colleges",
+    "Strong analytical and problem-solving skills",
+    "Proficiency in computer-aided design (CAD) software"
+  ],
+  "related_books": [
+    {
+      "title": "Marks' Standard Handbook for Mechanical Engineers",
+      "author": "Eugene A. Avallone, Theodore Baumeister III, Ali M. Sadegh",
+      "isbn": "978-0071428675"
+    },
+    {
+      "title": "Shigley's Mechanical Engineering Design",
+      "author": "Richard Budynas, Keith Nisbett",
+      "isbn": "978-0073398204"
+    },
+    {
+      "title": "To Engineer Is Human: The Role of Failure in Successful Design",
+      "author": "Henry Petroski",
+      "isbn": "978-0679734161"
+    }
+  ]
+}
