@@ -100,7 +100,7 @@ CareerWayFinder is an interactive web-based platform designed to help individual
    node CWF DASHBOARD\JS\Admin.js
    ```
 6. Visit the User Dashboard at `https://localhost:5000`.
-   Visit The Admin panel at `https:localhost:3000`
+   Visit The Admin panel at `https://localhost:3000`
 
 7. Database configure :
    Must check Mongodb Connection String before running project inside `Project CWF\server\MONGODB\dbcon.js`
